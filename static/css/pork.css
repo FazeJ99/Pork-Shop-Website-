@@ -70,7 +70,7 @@ header .navbar {
 
 .hero-section {
   height: 100vh;
-  background-image: url(./images/pexels-cristian-rojas-8279973.jpg);
+  background-image: url("../images/pexels-cristian-rojas-8279973.jpg");
   background-position: center;
   background-size: cover;
   display: flex;
@@ -271,14 +271,14 @@ header .navbar {
 
 .login .form-details {
   padding: 0 40px;
-  background: url("images/best-grilled-pork-chops-14\ blur.jpg");
+  background: url("../images/best-grilled-pork-chops-14\ blur.jpg");
   background-position: center;
   background-size: cover;
 }
 
 .signup .form-details {
   padding: 0 20px;
-  background: url("images/Grilled-Pork-Chops-blur.jpg");
+  background: url("../images/Grilled-Pork-Chops-blur.jpg");
   background-position: center;
   background-size: cover;
 }

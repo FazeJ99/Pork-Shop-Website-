@@ -4,8 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>www.porkshop.co.ke</title>
-    <link rel="stylesheet" href="pork.css" />
-    <script src="pork.js" defer></script>
+    <!--<link rel="stylesheet" href="pork.css" />-->
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pork.css') }}">
+     <!-- You can also link JavaScript files here -->
+     <script src="{{ url_for('static', filename='js/pork.js') }}"></script>
+    <!--<script src="pork.js" defer></script>-->
     <script src="https://kit.fontawesome.com/b1e55971fd.js" crossorigin="anonymous"></script>
     <link
       rel="stylesheet"
@@ -51,7 +55,7 @@
           </p>
         </div>
         <div class="form-content">
-        <form action = "connect.inc.php" method="post">
+        <form action = "/login" method="post">
           <h2>LOGIN</h2>
             <div class="input-field">
               <input type="text" name="email" required />
@@ -80,7 +84,7 @@
         </div>
         <div class="form-content">
           <h2>SIGNUP</h2>
-          <form action = "connect.inc.php" method="post">
+          <form action = "/signup" method="post">
             <div class="input-field">
               <input type="text" name="email" required />
               <label>Enter your email</label>
@@ -105,7 +109,6 @@
         </div>
       </div>
     </div>
-  </form>
     <section class="about" id="about">
       <h1>About Us</h1>
       <p style="font-weight: bold">
@@ -113,7 +116,7 @@
       </p>
       <div class="about-info">
         <div class="about-img">
-          <img src="images/logo-color.png" />
+          <img src="static/images/logo-color.png"/>
         </div>
         <div>
           <p>
@@ -131,10 +134,10 @@
             <div class="food-menu-container container">
                 <div class="food-menu-item">
                     <div class="food-img">
-                        <img src="images/istockphoto-531464366-170667a.webp" alt="img error"/>
+                        <img src="static\images\istockphoto-531464366-170667a.webp" alt="img error"/>
                     </div>
                     <div class="food-description">
-                        <h2 class="food-titile">Pork Choma</h2>
+                        <h2 class="food-titile">Grilled Pork</h2>
                         <p>
                           Eleganty grilled and marinated pork with a tinge of Rosemary
                         </p>
@@ -143,10 +146,10 @@
                 </div>
                 <div class="food-menu-item">
                     <div class="food-img">
-                        <img src="./images/jose-ignacio-pompe-s-Z-h0fEiBM-unsplash.jpg" alt="img error"/>
+                        <img src="static/images/jose-ignacio-pompe-s-Z-h0fEiBM-unsplash.jpg" alt="img error"/>
                     </div>
                     <div class="food-description">
-                        <h2 class="food-titile">Mbuzi Choma</h2>
+                        <h2 class="food-titile">Grilled Goat</h2>
                           <p>
                             Crispy grilled goat meat bolstering with flavour
                           </p>
@@ -155,10 +158,10 @@
                 </div>
                 <div class="food-menu-item">
                     <div class="food-img">
-                        <img src="images/pork fry 2.jpg" alt="img error" />
+                        <img src="static/images/pork fry 2.jpg" alt="img error" />
                     </div>
                     <div class="food-description">
-                        <h2 class="food-titile">Pork Fry</h2>
+                        <h2 class="food-titile">Fried Pork</h2>
                         <p>
                             Flavoury and juicy pork fried to near perfection
                         </p>
@@ -167,10 +170,10 @@
                 </div>
                 <div class="food-menu-item">
                     <div class="food-img">
-                        <img src="images/goat fry.jpg" alt="image error" />
+                        <img src="static/images/goat fry.jpg" alt="image error" />
                     </div>
                     <div class="food-description">
-                        <h2 class="food-titile">Mbuzi Fry</h2>
+                        <h2 class="food-titile">Fried Goat</h2>
                         <p>
                             Juicy,Tender goat meat dipped and lathered in marination
                         </p>
@@ -179,7 +182,7 @@
                 </div>
                 <div class="food-menu-item">
                     <div class="food-img">
-                        <img src="images/ugali greens.jpg" alt="image error" />
+                        <img src="static/images/ugali greens.jpg" alt="image error" />
                     </div>
                     <div class="food-description">
                         <h2 class="food-titile">Ugali & Greens</h2>
@@ -191,7 +194,7 @@
                 </div>
                 <div class="food-menu-item">
                     <div class="food-img">
-                        <img src="./images/cola.jpg" alt="image error" />
+                        <img src="static/images/cola.jpg" alt="image error" />
                     </div>
                     <div class="food-description">
                         <h2 class="food-titile">Beverages</h2>
