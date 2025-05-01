@@ -3,11 +3,12 @@ import pymysql
 
 app = Flask(__name__)   
 app.secret_key = "something_secret"
+
 # Database connection    
 db = pymysql.connect(
     host = "localhost",
-    user = "root",
-    password = "",
+    user = "faze",
+    password = "12345",
     database  = "porkshop"
 )
 cursor  = db.cursor()
