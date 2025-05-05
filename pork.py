@@ -1,5 +1,6 @@
 from flask import Flask, request, redirect, render_template,session
 import pymysql
+from pymysql import IntegrityError
 
 app = Flask(__name__)   
 app.secret_key = "something_secret"
@@ -44,7 +45,18 @@ def signup():
         try:
             cursor.execute("INSERT INTO users (email , password) VALUES (%s , %s)" , (email,password))
             db.commit()
-            return redirect('/login')
+            return '''  
+                Signup Successful <br>
+                <a href="/login">Go to Login</a>'''
+        except IntegrityError as e:
+            if e.args[0] == 1062:
+                return """
+                Email already exists
+                <br>
+                <a href="/signup">Go back to Signup</a>
+                """
+            else:
+                "An error occurred"
         except Exception as e:
             return f"Error: {str(e)}"
     return render_template('pork.html')
