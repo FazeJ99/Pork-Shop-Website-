@@ -30,7 +30,8 @@ def login():
         finally:
             if user:
                 session["id"] = user[0]
-                return "Login Successful"
+                return """Login Successful <br>
+                        Return to <a href="/">Home</a>"""
             else:
                 return "Invalid Credentials"
     return render_template('pork.html')
